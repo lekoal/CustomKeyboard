@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">CustomKeyboard</string>
+    <string name="set_keyboard_button_text">Установить клавиатуру</string>
+    <string name="capslock_button_desc">CapsLock button</string>
+    <string name="backspace_button_desc">BackSpace button</string>
+    <string name="change_language_button_desc">Change language button</string>
+    <string name="keyboard_name">Custom Keyboard</string>
+    <string name="change_color_key_desc">Change color</string>
+    <string name="test_keyboard_button_text">Тестировать клавиатуру</string>
+    <string name="testing_text_field">Поле ввода для тестирования</string>
+    <string name="testing_text_field_placeholder_text">Введите символы</string>
 </resources>
