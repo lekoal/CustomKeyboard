@@ -1,6 +1,6 @@
 package com.private_projects.customkeyboard.data
 
-sealed class KeyboardKeys(
+sealed class KeyboardKeys( //Класс значений наборов букв
     val firstTextBlock: List<String>,
     val secondTextBlock: List<String>,
     val thirdTextBlock: List<String>

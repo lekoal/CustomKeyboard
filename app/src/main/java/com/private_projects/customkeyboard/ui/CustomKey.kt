@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.sp
 import com.private_projects.customkeyboard.services.CustomKeyboardService
 
 @Composable
-fun RowScope.CustomKey(
+fun RowScope.CustomKey( //Функция создания клавиши клавиатуры
     text: String = "",
     mainColor: Color,
     interactionSource: MutableInteractionSource,

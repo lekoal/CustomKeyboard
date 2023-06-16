@@ -8,7 +8,7 @@ import androidx.compose.ui.text.toUpperCase
 import androidx.lifecycle.ViewModel
 import com.private_projects.customkeyboard.data.MainColors
 
-class MainViewModel : ViewModel() {
+class MainViewModel : ViewModel() { //ViewModel для обработки нажатий, смены языка ввода и цвета
     private var _currentLocale = mutableStateOf(BACKSPACE_CAPS_ENG_TEXT)
     val currentLocale: State<String> = _currentLocale
 

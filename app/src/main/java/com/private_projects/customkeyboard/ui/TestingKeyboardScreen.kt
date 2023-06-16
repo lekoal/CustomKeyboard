@@ -20,7 +20,7 @@ import com.private_projects.customkeyboard.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TestingKeyboardScreen(modifier: Modifier = Modifier) {
+fun TestingKeyboardScreen(modifier: Modifier = Modifier) { //Экран, где можно протестировать выбранную клавиатуру
     Column(
         modifier = modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,

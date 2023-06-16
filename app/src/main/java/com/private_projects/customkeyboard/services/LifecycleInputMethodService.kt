@@ -5,7 +5,7 @@ import android.inputmethodservice.InputMethodService
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ServiceLifecycleDispatcher
 
-abstract class LifecycleInputMethodService : InputMethodService(), LifecycleOwner {
+abstract class LifecycleInputMethodService : InputMethodService(), LifecycleOwner { //Привязка сервиса к жизненному циклу
     protected val dispatcher = ServiceLifecycleDispatcher(this)
 
     override fun onCreate() {

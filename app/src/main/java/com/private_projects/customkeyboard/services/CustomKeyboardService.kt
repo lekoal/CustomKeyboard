@@ -13,7 +13,7 @@ import androidx.savedstate.setViewTreeSavedStateRegistryOwner
 import com.private_projects.customkeyboard.ui.CustomKeyboardView
 
 class CustomKeyboardService : LifecycleInputMethodService(), ViewModelStoreOwner,
-    SavedStateRegistryOwner {
+    SavedStateRegistryOwner { //Сервис для работы клавиатуры в качестве системной
     private val savedStateRegistryController = SavedStateRegistryController.create(this)
     override fun onCreateInputView(): View {
         val view = CustomKeyboardView(this)

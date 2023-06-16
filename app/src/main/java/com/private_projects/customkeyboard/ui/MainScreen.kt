@@ -19,7 +19,7 @@ fun MainScreen(
     modifier: Modifier = Modifier,
     viewModel: MainViewModel,
     navController: NavController,
-    startIntent: () -> Unit) {
+    startIntent: () -> Unit) { //Главный экран для отображения кнопок и клавиатуры
     Column(
         modifier = modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,

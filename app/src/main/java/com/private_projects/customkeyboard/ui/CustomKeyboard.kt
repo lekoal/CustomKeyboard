@@ -15,7 +15,7 @@ fun CustomKeyboard(
     modifier: Modifier = Modifier,
     viewModel: MainViewModel,
     isBlocked: Boolean = false
-) {
+) { //Создаём клавиатуру с помощью столбцов и строк
     val currentLocale = viewModel.currentLocale
     val isCaps = viewModel.isCaps
     Card(

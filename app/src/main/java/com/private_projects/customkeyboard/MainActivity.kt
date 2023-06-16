@@ -63,7 +63,7 @@ class MainActivity : ComponentActivity() {
     private fun isCustomKeyboardEnabled(
         inputMethodManager: InputMethodManager,
         packageName: String
-    ): Boolean {
+    ): Boolean { //Функция проверки выбора клавиатуры
         val enabledInputMethods = inputMethodManager.enabledInputMethodList
         for (enabledInputMethod in enabledInputMethods) {
             if (enabledInputMethod.packageName == packageName) {

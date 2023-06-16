@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.AbstractComposeView
 
-class CustomKeyboardView(context: Context) : AbstractComposeView(context) {
+class CustomKeyboardView(context: Context) : AbstractComposeView(context) { //View для запуска и работы службы
     private var viewModel = MainViewModel()
 
     @Composable

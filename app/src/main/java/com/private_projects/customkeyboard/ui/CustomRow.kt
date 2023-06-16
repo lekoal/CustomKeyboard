@@ -57,7 +57,7 @@ fun CustomRow(
     isFunctionalRow: Boolean = false,
     isBlocked: Boolean,
     viewModel: MainViewModel
-) {
+) { //Строки для клавиатуры в зависимости от типа вводимых данных
     var expandColorMenu by remember {
         mutableStateOf(false)
     }
@@ -66,6 +66,7 @@ fun CustomRow(
     }
     val context = LocalContext.current
 
+    //SharedPreferences для сохранения выбранного цвета
     val preferences =
         LocalContext.current.getSharedPreferences("mainColor", Context.MODE_PRIVATE)
     if (!preferences.contains("currentColor")) {
