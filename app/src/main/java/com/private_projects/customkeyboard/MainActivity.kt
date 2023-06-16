@@ -1,7 +1,9 @@
 package com.private_projects.customkeyboard
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.provider.Settings
 import android.view.inputmethod.InputMethodManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -40,8 +42,13 @@ class MainActivity : ComponentActivity() {
                             MainScreen(viewModel = viewModel, navController = navController) {
                                 val imm = getSystemService(Context.INPUT_METHOD_SERVICE)
                                         as InputMethodManager
-                                imm.showInputMethodPicker()
-                                imm.showSoftInput(currentFocus, 0)
+                                if (isCustomKeyboardEnabled(imm, this@MainActivity.packageName)) {
+                                    imm.showInputMethodPicker() //Позволяет выбрать клавиатуру по умолчанию
+                                    imm.showSoftInput(currentFocus, 0)
+                                } else {
+                                    val intent = Intent(Settings.ACTION_INPUT_METHOD_SETTINGS)
+                                    startActivity(intent) //Позволяет включить клавиатуру в системе
+                                }
                             }
                         }
                         composable("testing_keyboard_screen") {
@@ -51,5 +58,18 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    private fun isCustomKeyboardEnabled(
+        inputMethodManager: InputMethodManager,
+        packageName: String
+    ): Boolean {
+        val enabledInputMethods = inputMethodManager.enabledInputMethodList
+        for (enabledInputMethod in enabledInputMethods) {
+            if (enabledInputMethod.packageName == packageName) {
+                return true
+            }
+        }
+        return false
     }
 }
